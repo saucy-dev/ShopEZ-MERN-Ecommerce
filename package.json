@@ -1,0 +1,12 @@
+{
+    "name": "shopez",
+    "version": "1.0.0",
+    "description": "ShopEZ – One-Stop Shop for Online Purchases",
+    "scripts": {
+        "backend": "cd backend && npm run dev",
+        "frontend": "cd frontend && npm run dev",
+        "seed": "cd backend && node seeder.js",
+        "seed:destroy": "cd backend && node seeder.js -d",
+        "install:all": "cd backend && npm install && cd ../frontend && npm install"
+    }
+}
