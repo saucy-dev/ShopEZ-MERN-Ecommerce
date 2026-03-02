@@ -36,7 +36,7 @@ const MyOrdersPage = () => {
                                     <tr key={o._id}>
                                         <td style={{ fontFamily: 'monospace', fontSize: '0.8rem' }}>#{o._id.slice(-8).toUpperCase()}</td>
                                         <td>{new Date(o.createdAt).toLocaleDateString()}</td>
-                                        <td style={{ color: 'var(--accent)', fontWeight: '600' }}>${o.totalPrice?.toFixed(2)}</td>
+                                        <td style={{ color: 'var(--accent)', fontWeight: '600' }}>₹{o.totalPrice?.toFixed(2)}</td>
                                         <td>
                                             <span className={`badge badge-${o.isPaid ? 'success' : 'danger'}`}>{o.isPaid ? 'Paid' : 'Unpaid'}</span>
                                         </td>

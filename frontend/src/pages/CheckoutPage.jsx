@@ -109,13 +109,13 @@ const CheckoutPage = () => {
                                     <img className="cart-item-img" src={item.image} alt={item.name} />
                                     <div className="cart-item-info" style={{ flex: 1 }}>{item.name}</div>
                                     <span style={{ color: 'var(--text-muted)' }}>x{item.qty}</span>
-                                    <span style={{ fontWeight: '700', color: 'var(--accent)' }}>${(item.price * item.qty).toFixed(2)}</span>
+                                    <span style={{ fontWeight: '700', color: 'var(--accent)' }}>₹{(item.price * item.qty).toFixed(2)}</span>
                                 </div>
                             ))}
                             <div style={{ marginTop: '1rem', borderTop: '1px solid var(--border)', paddingTop: '1rem' }}>
                                 <div className="cart-summary-row"><span>Shipping to</span><span style={{ color: 'var(--text-primary)' }}>{addr.city}, {addr.country}</span></div>
                                 <div className="cart-summary-row"><span>Payment</span><span style={{ color: 'var(--text-primary)' }}>{payment}</span></div>
-                                <div className="cart-summary-row total"><span>Total</span><span>${total.toFixed(2)}</span></div>
+                                <div className="cart-summary-row total"><span>Total</span><span>₹{total.toFixed(2)}</span></div>
                             </div>
                         </div>
                         <div style={{ display: 'flex', gap: '0.7rem' }}>

@@ -83,7 +83,7 @@ const ProductDetailPage = () => {
                         </div>
 
                         <div style={{ fontSize: '2rem', fontWeight: '800', color: 'var(--accent)', marginBottom: '1rem' }}>
-                            ${product.price?.toFixed(2)}
+                            ₹{product.price?.toFixed(2)}
                         </div>
                         <p style={{ color: 'var(--text-secondary)', lineHeight: '1.7', marginBottom: '1.5rem' }}>{product.description}</p>
 

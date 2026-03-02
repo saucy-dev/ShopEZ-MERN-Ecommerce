@@ -68,7 +68,7 @@ const OrderPage = () => {
                                     <img className="cart-item-img" src={item.image} alt={item.name} />
                                     <div className="cart-item-info" style={{ flex: 1 }}>{item.name}</div>
                                     <span style={{ color: 'var(--text-muted)' }}>x{item.qty}</span>
-                                    <span style={{ color: 'var(--accent)', fontWeight: '700' }}>${(item.price * item.qty).toFixed(2)}</span>
+                                    <span style={{ color: 'var(--accent)', fontWeight: '700' }}>₹{(item.price * item.qty).toFixed(2)}</span>
                                 </div>
                             ))}
                         </div>
@@ -76,10 +76,10 @@ const OrderPage = () => {
 
                     <div className="card" style={{ height: 'fit-content' }}>
                         <h3 style={{ marginBottom: '1rem' }}>Summary</h3>
-                        <div className="cart-summary-row"><span>Items</span><span>${order.itemsPrice?.toFixed(2)}</span></div>
-                        <div className="cart-summary-row"><span>Tax</span><span>${order.taxPrice?.toFixed(2)}</span></div>
-                        <div className="cart-summary-row"><span>Shipping</span><span>${order.shippingPrice?.toFixed(2)}</span></div>
-                        <div className="cart-summary-row total"><span>Total</span><span>${order.totalPrice?.toFixed(2)}</span></div>
+                        <div className="cart-summary-row"><span>Items</span><span>₹{order.itemsPrice?.toFixed(2)}</span></div>
+                        <div className="cart-summary-row"><span>Tax</span><span>₹{order.taxPrice?.toFixed(2)}</span></div>
+                        <div className="cart-summary-row"><span>Shipping</span><span>₹{order.shippingPrice?.toFixed(2)}</span></div>
+                        <div className="cart-summary-row total"><span>Total</span><span>₹{order.totalPrice?.toFixed(2)}</span></div>
                         {!order.isPaid && (
                             <button className="btn btn-success btn-full" style={{ marginTop: '1rem' }} onClick={handleMarkPaid}>
                                 Mark as Paid (Demo)

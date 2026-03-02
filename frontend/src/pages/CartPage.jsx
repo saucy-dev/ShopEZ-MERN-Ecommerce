@@ -53,10 +53,10 @@ const CartPage = () => {
                     {/* Summary */}
                     <div className="card" style={{ height: 'fit-content' }}>
                         <h3 style={{ marginBottom: '1rem', fontWeight: '700' }}>Order Summary</h3>
-                        <div className="cart-summary-row"><span>Subtotal</span><span>${subtotal.toFixed(2)}</span></div>
-                        <div className="cart-summary-row"><span>Tax (15%)</span><span>${tax.toFixed(2)}</span></div>
-                        <div className="cart-summary-row"><span>Shipping</span><span>{shipping === 0 ? <span style={{ color: 'var(--success)' }}>FREE</span> : `$${shipping.toFixed(2)}`}</span></div>
-                        <div className="cart-summary-row total"><span>Total</span><span>${total.toFixed(2)}</span></div>
+                        <div className="cart-summary-row"><span>Subtotal</span><span>₹{subtotal.toFixed(2)}</span></div>
+                        <div className="cart-summary-row"><span>Tax (15%)</span><span>₹{tax.toFixed(2)}</span></div>
+                        <div className="cart-summary-row"><span>Shipping</span><span>{shipping === 0 ? <span style={{ color: 'var(--success)' }}>FREE</span> : `₹${shipping.toFixed(2)}`}</span></div>
+                        <div className="cart-summary-row total"><span>Total</span><span>₹{total.toFixed(2)}</span></div>
                         <button className="btn btn-primary btn-full" style={{ marginTop: '1rem' }} onClick={() => navigate('/checkout')}>
                             Proceed to Checkout <FiArrowRight />
                         </button>

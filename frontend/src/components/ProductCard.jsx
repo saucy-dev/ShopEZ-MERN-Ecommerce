@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => {
                         <span>{product.rating?.toFixed(1)}</span>
                         <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>({product.numReviews})</span>
                     </div>
-                    <div className="product-card-price">${product.price?.toFixed(2)}</div>
+                    <div className="product-card-price">₹{product.price?.toFixed(2)}</div>
                 </div>
                 <div className="product-card-footer">
                     <span style={{ fontSize: '0.8rem', color: product.countInStock > 0 ? 'var(--success)' : 'var(--danger)' }}>

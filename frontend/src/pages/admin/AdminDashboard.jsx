@@ -83,7 +83,7 @@ const AdminDashboard = () => {
                                 <tr key={o._id}>
                                     <td style={{ fontFamily: 'monospace', fontSize: '0.8rem' }}>#{o._id.slice(-8).toUpperCase()}</td>
                                     <td>{o.user?.name || 'N/A'}</td>
-                                    <td style={{ color: 'var(--accent)', fontWeight: '600' }}>${o.totalPrice?.toFixed(2)}</td>
+                                    <td style={{ color: 'var(--accent)', fontWeight: '600' }}>₹{o.totalPrice?.toFixed(2)}</td>
                                     <td><span className={`badge badge-${o.status === 'delivered' ? 'success' : 'info'}`}>{o.status}</span></td>
                                     <td><span className={`badge badge-${o.isPaid ? 'success' : 'danger'}`}>{o.isPaid ? 'Yes' : 'No'}</span></td>
                                 </tr>

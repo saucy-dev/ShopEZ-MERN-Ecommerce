@@ -50,7 +50,7 @@ const AdminOrders = () => {
                                         <td style={{ fontFamily: 'monospace', fontSize: '0.78rem' }}>#{o._id.slice(-8).toUpperCase()}</td>
                                         <td>{o.user?.name || 'N/A'}</td>
                                         <td style={{ fontSize: '0.8rem' }}>{new Date(o.createdAt).toLocaleDateString()}</td>
-                                        <td style={{ color: 'var(--accent)', fontWeight: '600' }}>${o.totalPrice?.toFixed(2)}</td>
+                                        <td style={{ color: 'var(--accent)', fontWeight: '600' }}>₹{o.totalPrice?.toFixed(2)}</td>
                                         <td><span className={`badge badge-${o.isPaid ? 'success' : 'danger'}`}>{o.isPaid ? 'Yes' : 'No'}</span></td>
                                         <td>
                                             <select

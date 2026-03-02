@@ -70,7 +70,7 @@ const AdminProducts = () => {
                                         <td><img src={p.image} alt={p.name} style={{ width: '48px', height: '48px', objectFit: 'cover', borderRadius: '6px' }} /></td>
                                         <td style={{ color: 'var(--text-primary)', fontWeight: '500', maxWidth: '200px' }}>{p.name}</td>
                                         <td>{p.category}</td>
-                                        <td style={{ color: 'var(--accent)', fontWeight: '600' }}>${p.price?.toFixed(2)}</td>
+                                        <td style={{ color: 'var(--accent)', fontWeight: '600' }}>₹{p.price?.toFixed(2)}</td>
                                         <td>
                                             <span className={`badge badge-${p.countInStock > 0 ? 'success' : 'danger'}`}>{p.countInStock}</span>
                                         </td>
